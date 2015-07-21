@@ -1,0 +1,23 @@
+{
+  "name": "domfixture",
+  "version": "0.1.0",
+  "description": "Node.js and browser compatible HTML fixtures",
+  "main": "domfixture.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhartikainen/domfixture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhartikainen/domfixture/issues"
+  },
+  "homepage": "https://github.com/jhartikainen/domfixture",
+  "dependencies": {
+    "js-fixtures": "git://github.com/jhartikainen/js-fixtures",
+    "jsdom": "<4.0.0"
+  }
+}
