@@ -1,16 +1,23 @@
 var jsdom = require('jsdom');
-var fixtures = require('js-fixtures');
+
+function fixtureHTML(markup) {
+	var frame = document.createElement('iframe');
+
+	document.body.appendChild(frame);
+	frame.contentDocument.write(markup);
+
+	return frame;
+}
 
 module.exports = {
 	set: function(markup, callback) {
-		//we'll use js-fixtures if we're in a browser, otherwise jsdom
 		var isBrowser = typeof document != 'undefined' && typeof window != 'undefined';
 		if(!isBrowser) {
 			jsdom.env(markup, [], callback);
 		}
 		else {
-			fixtures.set(markup);
-			callback(undefined, fixtures.window());
+			var frame = fixtureHTML(markup);
+			callback(undefined, frame.contentWindow);
 		}
 	}
 };

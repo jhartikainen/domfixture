@@ -9,7 +9,7 @@ Allows you to run browserified tests easily in both node and browser, even when 
 //pass the markup you want to use + a callback
 domfixture.set('<html>markup goes here</html>', function(errors, window) {
   //errors might contain any errors from jsdom
-  //window is a reference to a window, either from jsdom or js-fixtures
+  //window is a reference to a window, either from jsdom or a created IFRAME
 });
 ```
 

@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/jhartikainen/domfixture",
   "dependencies": {
-    "js-fixtures": "git://github.com/jhartikainen/js-fixtures",
     "jsdom": "<4.0.0"
   }
 }
