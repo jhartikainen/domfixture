@@ -2,6 +2,7 @@ var jsdom = require('jsdom');
 
 function fixtureHTML(markup) {
 	var frame = document.createElement('iframe');
+	frame.frameBorder = 0;
 
 	document.body.appendChild(frame);
 	frame.contentDocument.write(markup);
